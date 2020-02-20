@@ -1,8 +1,6 @@
 package com.signant;
 
-import java.util.HashSet;
 import java.util.Optional;
-import java.util.Set;
 
 import javax.transaction.Transactional;
 
@@ -34,11 +32,11 @@ public class AddressBookSpringBootWithJpaApplication
 	@Override
 	public void run(String... args) throws Exception
 	{
-		typeOne();
+		saveCountry();
 	}
 
 	@Transactional
-	private void typeOne()
+	private void saveCountry()
 	{
 		Countries countries = new Countries();
 		countries.setName("India");
@@ -57,13 +55,8 @@ public class AddressBookSpringBootWithJpaApplication
 		cities12.setName("Kadapa");
 		cities12.setStates(states1);
 
-		Set<Cities> State_1_cities = new HashSet<Cities>();
-		State_1_cities.add(cities11);
-		State_1_cities.add(cities12);
-
-		states1.setCities(State_1_cities);
-
-		System.out.println(countries);
+		states1.getCities().add(cities11);
+		states1.getCities().add(cities12);
 
 		/* State 2 */
 		States states2 = new States();
@@ -79,17 +72,17 @@ public class AddressBookSpringBootWithJpaApplication
 		cities22.setName("Warangal");
 		cities22.setStates(states2);
 
-		Set<Cities> State_2_cities = new HashSet<Cities>();
-		State_2_cities.add(cities21);
-		State_2_cities.add(cities22);
+		states2.getCities().add(cities21);
+		states2.getCities().add(cities22);
 
-		states2.setCities(State_2_cities);
+		countries.getStates().add(states1);
+		countries.getStates().add(states2);
 
 		/* Saving country */
 		countryRepository.save(countries);
 
 		Optional<Countries> findById = countryRepository.findById(1);
-		System.out.println(findById);
+		System.out.println("After inserting country : "+findById);
 	}
 
 }
