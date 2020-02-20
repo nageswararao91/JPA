@@ -2,7 +2,7 @@ package com.signant.addressbook.entities;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.ElementCollection;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,7 +24,6 @@ import lombok.ToString;
 @Setter
 @ToString
 
-
 @Entity
 @Table(name = "Countries")
 public class Countries
@@ -34,17 +33,8 @@ public class Countries
 	private int countrySeq;
 	private String name;
 
-	@OneToMany(mappedBy = "country",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "country", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@NotNull
-	private Set<States> states;
-	
-	
-//	public void addState(States state) {
-//		if(states == null)
-//			states = new HashSet<States>();
-//		state.setCountry(this);
-//		states.add(state);
-//	}
-	
+	private Set<States> states = new HashSet<States>();
 
 }
