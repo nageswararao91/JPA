@@ -1,0 +1,9 @@
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\entities\Address.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\repository\AddressBootRepository.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\entities\Countries.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\AddressBookSpringBootWithJpaApplication.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\repository\CountryRepository.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\repository\StateRepository.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\entities\Cities.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\repository\CityReposiroty.java
+D:\RNR\SpringBoot+Hibernate\AddressBook_Spring_Boot_With_JPA\src\main\java\com\signant\addressbook\entities\States.java

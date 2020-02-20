@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.signant.AddressBookSpringBootWithJpaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.102 s <<< FAILURE! - in com.signant.AddressBookSpringBootWithJpaApplicationTests
+contextLoads  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.StackOverflowError
+

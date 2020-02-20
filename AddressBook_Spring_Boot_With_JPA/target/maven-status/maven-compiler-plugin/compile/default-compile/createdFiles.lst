@@ -1,0 +1,9 @@
+com\signant\addressbook\repository\AddressBootRepository.class
+com\signant\addressbook\repository\StateRepository.class
+com\signant\addressbook\entities\Cities.class
+com\signant\addressbook\repository\CityReposiroty.class
+com\signant\addressbook\entities\Countries.class
+com\signant\addressbook\entities\States.class
+com\signant\AddressBookSpringBootWithJpaApplication.class
+com\signant\addressbook\repository\CountryRepository.class
+com\signant\addressbook\entities\Address.class
