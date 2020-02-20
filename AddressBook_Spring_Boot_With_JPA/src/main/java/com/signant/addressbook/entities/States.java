@@ -1,12 +1,13 @@
 package com.signant.addressbook.entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -32,19 +33,10 @@ public class States
 	private int stateSeq;
 	private String name;
 
-	@OneToMany(mappedBy = "states",fetch = FetchType.EAGER)
-	private Set<Cities> cities;
+	@OneToMany(mappedBy = "states", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private Set<Cities> cities = new HashSet<Cities>();;
 
 	@ManyToOne
-	@JoinColumn(name = "countrySeq", nullable = false)
 	Countries country;
-
-//	public void addCiti(Cities city)
-//	{
-//		if(cities ==null)
-//			cities = new HashSet<Cities>();
-//		city.setStates(this);
-//		cities.add(city);
-//	}
 
 }
